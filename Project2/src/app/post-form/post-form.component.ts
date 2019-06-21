@@ -37,7 +37,7 @@ export class PostFormComponent implements OnInit {
     this.post = {
 
       username: this.username,
-      comment: this.postText
+      text: this.postText
 
     };
 
