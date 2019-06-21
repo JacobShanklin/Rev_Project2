@@ -14,7 +14,6 @@ export class PostFormComponent implements OnInit {
   postText: string;
   post: IPost;
   username: string;
-  userId: number;
   subscription: Subscription;
   currentUser: IUser;
   constructor(private postsService: PostService, private userService: AuthenticationService) {
@@ -36,8 +35,10 @@ export class PostFormComponent implements OnInit {
   }
   setPost() {
     this.post = {
+
       username: this.username,
-      text: this.postText
+      comment: this.postText
+
     };
 
     console.log(this.post);
