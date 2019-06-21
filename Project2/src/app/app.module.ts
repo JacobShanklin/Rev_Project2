@@ -21,11 +21,8 @@ import { ResetPasswordComponent } from './reset-password/reset-password.componen
 import { fakeBackendProvider } from './_helpers';
 import { AuthGuard } from './_helpers';
 import { JwtInterceptor, ErrorInterceptor } from './_helpers';
-<<<<<<< HEAD
-=======
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { ProfileComponent } from './profile/profile.component';
->>>>>>> 525d736429b02419ba962970baa0b3d26cd61364
 import { PostFeedComponent } from './post-feed/post-feed.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -41,11 +38,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     SidebarComponent,
     PostFormComponent,
     UsercardComponent,
-<<<<<<< HEAD
-=======
     EditProfileComponent,
     ProfileComponent,
->>>>>>> 525d736429b02419ba962970baa0b3d26cd61364
     PostFeedComponent,
     PostCardComponent
   ],
@@ -60,12 +54,8 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
       { path: 'register', component: RegisterComponent },
       { path: 'resetpassword', component: ResetPasswordComponent},
       { path: 'login', component: LoginComponent },
-<<<<<<< HEAD
-      { path: 'post', component: PostFormComponent, canActivate: [AuthGuard] },
-=======
       { path: 'post', component: PostFormComponent, canActivate: [AuthGuard]},
       { path: 'profile/:id', component: ProfileComponent, canActivate: [AuthGuard]},
->>>>>>> 525d736429b02419ba962970baa0b3d26cd61364
       { path: 'feed', component: PostFeedComponent }
 
     ])
