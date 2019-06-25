@@ -46,4 +46,17 @@ public class UserController {
 	public @ResponseBody User getUserByUri(@PathVariable("num") int num) {
 		return userRepo.selectById(num);
 	}
+	
+	
+	@PostMapping(value="/login.app")
+	public @ResponseBody User login(@RequestParam("username") String username,@RequestParam("password") String password){
+		
+		User user =userRepo.selectByUsername(username);
+		if(user == null) {
+			return null;
+		}
+		
+		return user;
+	}
+	
 }

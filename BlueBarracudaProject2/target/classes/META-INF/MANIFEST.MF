@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: merta
-=======
-Built-By: arnol
->>>>>>> e3da58a23506e152cd158510e860d04157a2b310
-Build-Jdk: 1.8.0_211
-Created-By: Maven Integration for Eclipse
-
