@@ -1,4 +1,4 @@
-package controller;
+package com.bluebarracuda.controller;
 
 import java.util.List;
 
@@ -12,9 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import model.Ratings;
-import repository.RatingRepo;
 
+import com.bluebarracuda.model.Ratings;
+import com.bluebarracuda.repo.RatingRepo;
 
 
 @CrossOrigin(origins="http://localhost:4200")
@@ -49,11 +49,6 @@ public class RatingController {
 	@PostMapping(value="{num}/getRatingByUri.app")
 	public @ResponseBody Ratings getRatingByUri(@PathVariable("num") int num) {
 		return ratingRepo.selectById(num);
-	}
-	
-	@PostMapping(value="/addRating.app")
-	public @ResponseBody void addRating(Rating rate) {
-		ratingRepo.insert(rate);
 	}
 
 }

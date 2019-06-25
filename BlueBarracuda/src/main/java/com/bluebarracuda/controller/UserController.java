@@ -1,5 +1,5 @@
-package controller;
-
+package com.bluebarracuda.controller;
+import com.bluebarracuda.model.User;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import model.User;
-import repository.UserRepo;
+
+import com.bluebarracuda.repo.UserRepo;
 
 @CrossOrigin(origins="http://localhost:4200")
 @Controller
@@ -46,34 +46,4 @@ public class UserController {
 	public @ResponseBody User getUserByUri(@PathVariable("num") int num) {
 		return userRepo.selectById(num);
 	}
-	
-<<<<<<< HEAD
-	
-	@PostMapping(value="/login.app")
-	public @ResponseBody User login(@RequestParam("username") String username,@RequestParam("password") String password){
-		
-		User user =userRepo.selectByUsername(username);
-		if(user == null) {
-			return null;
-		}
-		
-		return user;
-	}
-	
-=======
-	@PostMapping(value="/registerUser.app")
-	public @ResponseBody void addNewUser(User user) {
-		userRepo.insert(user);
-	}
-	
-	@PostMapping(value="/updatePassword.app")
-	public @ResponseBody void updatePassword(User user) {
-		userRepo.update(user);
-	}
-	
-	@postMapping(value="/removeUser.app")
-	public @ResponseBody void removeUser(User user) {
-		userRepo.delete(user);
-	}
->>>>>>> bd78206625217927135dc3c72d00c13d3e324e6a
 }
