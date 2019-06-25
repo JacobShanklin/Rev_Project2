@@ -1,5 +1,9 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: merta
+=======
+Built-By: arnol
+>>>>>>> f31148fba5f9207b72826dc4e6f30a64b8269b7b
 Build-Jdk: 1.8.0_211
 Created-By: Maven Integration for Eclipse
 

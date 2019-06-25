@@ -15,10 +15,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bluebarracuda.model.Comment;
 import com.bluebarracuda.repo.CommentRepo;
 
+import com.bluebarracuda.model.Comment;
+import com.bluebarracuda.repo.CommentRepo;
+
 
 @CrossOrigin(origins="http://localhost:4200")
 @Controller
-@RequestMapping(value="/Project2")
+@RequestMapping(value="comment/")
 public class CommentController {
 
 	private CommentRepo commentRepo;
