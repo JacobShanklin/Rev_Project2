@@ -49,6 +49,13 @@ public class UserRepo {
 		return sesFact.getCurrentSession().get(User.class, id);
 	}
 	
+	public User selectByUsername(String username) {
+		List<User> user = sesFact.getCurrentSession().createNativeQuery("select * from"+
+				" Users where name='"+username+"'", User.class).list();
+
+		
+	return	user.get(0);
+	}
 	public List<User> selectAll(){
 		return sesFact.getCurrentSession().createQuery("from User", User.class).list();
 	}
