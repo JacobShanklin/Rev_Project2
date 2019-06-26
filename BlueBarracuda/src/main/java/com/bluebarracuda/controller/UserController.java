@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-<<<<<<< HEAD
+
 
 import com.bluebarracuda.repo.UserRepo;
 
 @CrossOrigin(origins="http://localhost:4200")
-=======
+
 import com.bluebarracuda.model.User;
 import com.bluebarracuda.repo.UserRepo;
 
 @CrossOrigin(origins="*")
->>>>>>> f31148fba5f9207b72826dc4e6f30a64b8269b7b
+
 @Controller
 @RequestMapping(value="/user")
 public class UserController {

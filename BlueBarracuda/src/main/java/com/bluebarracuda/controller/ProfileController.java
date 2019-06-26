@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-<<<<<<< HEAD
-import com.bluebarracuda.model.Profile;
-import com.bluebarracuda.repo.ProfileRepo;
-=======
 
 import com.bluebarracuda.model.Profile;
 import com.bluebarracuda.repo.ProfileRepo;
 
->>>>>>> f31148fba5f9207b72826dc4e6f30a64b8269b7b
+
+import com.bluebarracuda.model.Profile;
+import com.bluebarracuda.repo.ProfileRepo;
+
+
 @CrossOrigin(origins="http://localhost:4200")
 @Controller
 @RequestMapping(value="/profile")

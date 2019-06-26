@@ -12,12 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-<<<<<<< HEAD
-=======
+
 import com.bluebarracuda.model.Ratings;
 import com.bluebarracuda.repo.RatingRepo;
 
->>>>>>> f31148fba5f9207b72826dc4e6f30a64b8269b7b
+
 
 import com.bluebarracuda.model.Ratings;
 import com.bluebarracuda.repo.RatingRepo;
