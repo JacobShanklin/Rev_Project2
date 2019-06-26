@@ -10,12 +10,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-<<<<<<< HEAD
+
 import com.bluebarracuda.model.Comment;
 import com.bluebarracuda.repo.CommentRepo;
 
-=======
->>>>>>> b1877fcd3ed9868f99b87ecf972f74d9f53f4920
+
 import com.bluebarracuda.model.Comment;
 import com.bluebarracuda.repo.CommentRepo;
 
