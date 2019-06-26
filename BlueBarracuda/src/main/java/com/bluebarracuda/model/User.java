@@ -1,18 +1,16 @@
 package com.bluebarracuda.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="User")
-public class User {	
+public class User {
+	
 
 	@Id
 	@Column(name="user_id")
@@ -24,31 +22,28 @@ public class User {
 	
 	@Column(name="password", unique=true, nullable=false)
 	private String password;
-
-	@OneToOne(	fetch = FetchType.LAZY,
-				cascade =  CascadeType.ALL,
-				mappedBy = "user")
-	private Profile profile;
-
-	public User(String username, String password) {
+	
+	public User() {
+		
+	}
+	public User(String username, String password, int userId) {
 		super();
 		this.username = username;
 		this.password = password;
+		this.userId = userId;
 	}
 	
+	public int getUserId() {
+		return userId;
+	}
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 	@Override
 	public String toString() {
 		return "user [username=" + username + ", password=" + password + "]";
 	}
-
-	public Profile getProfile() {
-		return profile;
-	}
-
-	public void setProfile(Profile profile) {
-		this.profile = profile;
-	}
-
+	
 	public String getUsername() {
 		return username;
 	}

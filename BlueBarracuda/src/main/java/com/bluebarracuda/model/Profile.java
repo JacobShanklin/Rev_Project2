@@ -1,18 +1,24 @@
 package com.bluebarracuda.model;
 
 import java.sql.Timestamp;
+import java.util.Arrays;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="Profile")
 public class Profile {
 
+	@Id
+	@Column(name="profileId")
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	int profileId;
+	
 	@Column(name="email")
 	private String email;
 
@@ -34,12 +40,11 @@ public class Profile {
 	@Column(name="image_link")
 	String imageLink;
 	
-    @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user;
-	
+	public Profile() {
+		
+	}
 	public Profile(String email, String firstName, String lastName, String occupation, Timestamp birthdate,
-			String hobbies, String imageLink) {
+			String hobbies, String imageLink, int profileId) {
 		super();
 		this.email = email;
 		this.firstName = firstName;
@@ -48,8 +53,19 @@ public class Profile {
 		this.birthdate = birthdate;
 		this.hobbies = hobbies;
 		this.imageLink = imageLink;
+		this.profileId = profileId;
 	}
+	
 
+	public int getProfileId() {
+		return profileId;
+	}
+	public void setProfileId(int profileId) {
+		this.profileId = profileId;
+	}
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
+	}
 	public String getEmail() {
 		return email;
 	}

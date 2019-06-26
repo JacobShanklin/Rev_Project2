@@ -26,48 +26,26 @@ public class Comment {
 	@Column(name="comment")
 	private String comment;	
 	
-	@Column(name="likes", nullable=true)
-	private int likes;
-	
-	@Column(name="dislikes", nullable=true)
-	private int dislikes;
+	@Column(name="rating", nullable=true)
+	private Ratings rating;
 	
 	public Comment() {
 		
 	}
-	
-	public Comment(User user, String comment, int likes, int dislikes) {
+	public Comment(User user, String comment, Ratings rating, int commentId) {
 		super();
 		this.user = user;
 		this.comment = comment;
-		this.likes = likes;
-		this.dislikes = dislikes;
-		
+		this.rating = rating;
+		this.commentId=commentId;
 	}
+	
 	public int getCommentId() {
 		return commentId;
 	}
-
 	public void setCommentId(int commentId) {
 		this.commentId = commentId;
 	}
-
-	public int getLikes() {
-		return likes;
-	}
-
-	public void setLikes(int likes) {
-		this.likes = likes;
-	}
-
-	public int getDislikes() {
-		return dislikes;
-	}
-
-	public void setDislikes(int dislikes) {
-		this.dislikes = dislikes;
-	}
-
 	public User getUser() {
 		return user;
 	}
@@ -80,13 +58,15 @@ public class Comment {
 	public void setComment(String comment) {
 		this.comment = comment;
 	}
-	
+	public Ratings getRating() {
+		return rating;
+	}
+	public void setRating(Ratings rating) {
+		this.rating = rating;
+	}
 	@Override
 	public String toString() {
-		return "Comment [user=" + user 
-				+ ", comment=" + comment 
-				+ ", likes=" + likes 
-				+ ", dislikes= " + dislikes + "]";
+		return "Comment [user=" + user + ", comment=" + comment + ", rating=" + rating + "]";
 	}
 	
 	
