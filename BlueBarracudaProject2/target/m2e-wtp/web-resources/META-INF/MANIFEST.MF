@@ -1,3 +1,4 @@
+<<<<<<< HEAD:BlueBarracudaProject2/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
 Manifest-Version: 1.0
 <<<<<<< HEAD
 Built-By: merta
@@ -7,3 +8,5 @@ Built-By: arnol
 Build-Jdk: 1.8.0_211
 Created-By: Maven Integration for Eclipse
 
+=======
+>>>>>>> c1f1a74a0ebf0f99ab0d01f2d083e8fe73906d0b:BlueBarracudaProject2/target/classes/META-INF/MANIFEST.MF
