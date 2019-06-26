@@ -13,16 +13,11 @@ import { AuthenticationService } from '../services';
 export class PostFormComponent implements OnInit {
   postText: string;
   post: IPost;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  username: string;
-=======
->>>>>>> e3da58a23506e152cd158510e860d04157a2b310
-=======
 
   username: string;
 
->>>>>>> c1f1a74a0ebf0f99ab0d01f2d083e8fe73906d0b
+
+
   subscription: Subscription;
   currentUser: IUser;
   constructor(private postsService: PostService, private userService: AuthenticationService) {
@@ -39,31 +34,21 @@ export class PostFormComponent implements OnInit {
   }
 
   setPost() {
-    this.post = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c1f1a74a0ebf0f99ab0d01f2d083e8fe73906d0b
+    // this.post = {
 
-      username: this.username,
-      text: this.postText
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> c1f1a74a0ebf0f99ab0d01f2d083e8fe73906d0b
-      user: this.currentUser,
-      post: this.postText,
-      rating: {
-        likes: 0,
-        dislikes: 0
-      }
-<<<<<<< HEAD
->>>>>>> e3da58a23506e152cd158510e860d04157a2b310
-=======
+    //   username: this.username,
+    //   text: this.postText
 
->>>>>>> c1f1a74a0ebf0f99ab0d01f2d083e8fe73906d0b
-    };
+
+    //   user: this.currentUser,
+    //   post: this.postText,
+    //   rating: {
+    //     likes: 0,
+    //     dislikes: 0
+    //   }
+
+    // };
 
     console.log(this.post);
 
