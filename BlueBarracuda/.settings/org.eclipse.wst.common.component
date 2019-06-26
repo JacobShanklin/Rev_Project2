@@ -2,10 +2,7 @@
     <wb-module deploy-name="BlueBarracuda-0.0.1-SNAPSHOT">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-<<<<<<< HEAD
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
-=======
->>>>>>> 93bec3c99b342463fb8565a1371eda347af50fe6
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <property name="context-root" value="BlueBarracuda"/>
         <property name="java-output-path" value="/BlueBarracuda/target/classes"/>
