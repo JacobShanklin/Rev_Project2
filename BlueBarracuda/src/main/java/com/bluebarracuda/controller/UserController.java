@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bluebarracuda.model.User;
 import com.bluebarracuda.repo.UserRepo;
 
-<<<<<<< HEAD
+
 @CrossOrigin(origins = "http://localhost:4200")
-=======
+
 /**
  * @author  Arnold C. Sinko
  * 			Jacob Shanklin
@@ -25,8 +25,6 @@ import com.bluebarracuda.repo.UserRepo;
  * 			Michael G. Perkins
  *
  */
-@CrossOrigin(origins = "*")
->>>>>>> bef15d62d6c06ea4c9b32b78d70685c4d6fa06a6
 @Controller
 @RequestMapping(value="/user")
 public class UserController {	

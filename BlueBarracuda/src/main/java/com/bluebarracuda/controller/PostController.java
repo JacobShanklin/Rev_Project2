@@ -82,9 +82,9 @@ public class PostController {
 		return postRepo.selectById(postId);
 	}
 
-<<<<<<< HEAD
 
-=======
+
+
 	/**
 	 * 
 	 * Calls the appropriate postRepo method in order to add a new Post from a specific User
@@ -92,8 +92,6 @@ public class PostController {
 	 * @param postText
 	 * @param userId
 	 */
-	
->>>>>>> bef15d62d6c06ea4c9b32b78d70685c4d6fa06a6
 	@PostMapping(value = "/post/newPost")
 
 	public @ResponseBody boolean addPost(@RequestParam("postText") String postText,
