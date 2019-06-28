@@ -55,7 +55,6 @@ public class PostController {
 	}
 
 	@PostMapping(value = "/newPost")
-
 	public @ResponseBody boolean addPost(@RequestParam("post") String postText,
 			@RequestParam("user_id") int user_id) {
 		

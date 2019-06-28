@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.bluebarracuda.model.User;
 import com.bluebarracuda.repo.UserRepo;
 
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:4200")
 @Controller
 @RequestMapping(value="/user")
 public class UserController {	
