@@ -13,8 +13,20 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+<<<<<<< HEAD
+/**
+ * @author  Arnold C. Sinko
+ * 			Jacob Shanklin
+ * 			Graham L Tyree
+ * 			Mert Altun
+ * 			Michael G. Perkins
+ *
+ */
+||||||| merged common ancestors
+=======
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+>>>>>>> cb466923809ac3589bac20d85dd2fb11387702e0
 @Entity
 @Table(name = "Users")
 public class User {
@@ -152,14 +164,21 @@ public class User {
 	public void setImageLink(String imageLink) {
 		this.imageLink = imageLink;
 	}
+<<<<<<< HEAD
+||||||| merged common ancestors
+
+	
+
+=======
 
 	@Override
 	public String toString() {
-		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + ", posts=" + posts
+		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password
 				+ ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", occupation="
 				+ occupation + ", birthdate=" + birthdate + ", hobbies=" + hobbies + ", imageLink=" + imageLink + "]";
 	}
 
 	
 
+>>>>>>> cb466923809ac3589bac20d85dd2fb11387702e0
 }
