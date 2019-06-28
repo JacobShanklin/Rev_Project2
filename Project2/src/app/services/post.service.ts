@@ -33,4 +33,13 @@ export class PostService {
         return this.posts;
     }
 
+    likePost(postId: number) {
+        const payload = new HttpParams()
+            .set('postId', postId.toString())
+            .set('user_id', this.currentUser.user_id.toString());
+        this.http.post(`${environment.apiUrl}/post/likePost`, payload).subscribe(data => {
+            console.log('Post liked' + data);
+        });
+    }
+
 }

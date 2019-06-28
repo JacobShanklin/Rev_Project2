@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { IPost } from '../services/Post';
 
 @Component({
@@ -8,6 +9,7 @@ import { IPost } from '../services/Post';
 })
 export class PostCardComponent implements OnInit {
   @Input() post: IPost;
+  faThumbsUp = faThumbsUp;
   constructor() {
 
   }

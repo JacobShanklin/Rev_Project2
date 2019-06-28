@@ -5,8 +5,9 @@
       <div id="post-card-body">
           <h4>{{post.user_id}}</h4>
           <p>{{post.postText}}</p>
-          <div>
-            <p>{{post.rating}}</p>
+          <div id="like-container">
+            <p>{{ (this.post.rating) ? this.post.rating.length : 0 }}</p>
+            <fa-icon [icon]='faThumbsUp' (click)='liked()' [style.color]='thumbStyle'></fa-icon>    
           </div>
 
       </div>

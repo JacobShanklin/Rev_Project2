@@ -78,7 +78,7 @@ public class PostController {
 	}
 	
 	@PostMapping(value="/likePost")
-	public @ResponseBody Post likePost(@RequestParam("postId") int postId, @RequestParam("userId") int userId) {
+	public @ResponseBody Post likePost(@RequestParam("postId") int postId, @RequestParam("user_id") int userId) {
 		Post post = postRepo.selectById(postId);
 		Rating rating = new Rating();
 		rating.setUser(userRepo.selectById(userId));
