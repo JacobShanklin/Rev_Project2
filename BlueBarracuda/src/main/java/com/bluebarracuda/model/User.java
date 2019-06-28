@@ -13,7 +13,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-<<<<<<< HEAD
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+
 /**
  * @author  Arnold C. Sinko
  * 			Jacob Shanklin
@@ -22,11 +25,8 @@ import javax.persistence.Table;
  * 			Michael G. Perkins
  *
  */
-||||||| merged common ancestors
-=======
-import com.fasterxml.jackson.annotation.JsonIgnore;
 
->>>>>>> cb466923809ac3589bac20d85dd2fb11387702e0
+
 @Entity
 @Table(name = "Users")
 public class User {
@@ -164,12 +164,7 @@ public class User {
 	public void setImageLink(String imageLink) {
 		this.imageLink = imageLink;
 	}
-<<<<<<< HEAD
-||||||| merged common ancestors
 
-	
-
-=======
 
 	@Override
 	public String toString() {
@@ -180,5 +175,5 @@ public class User {
 
 	
 
->>>>>>> cb466923809ac3589bac20d85dd2fb11387702e0
+
 }

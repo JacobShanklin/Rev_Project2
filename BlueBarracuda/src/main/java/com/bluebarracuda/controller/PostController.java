@@ -82,6 +82,9 @@ public class PostController {
 		return postRepo.selectById(postId);
 	}
 
+
+
+
 	/**
 	 * 
 	 * Calls the appropriate postRepo method in order to add a new Post from a specific User
@@ -89,10 +92,10 @@ public class PostController {
 	 * @param postText
 	 * @param userId
 	 */
-	
 	@PostMapping(value = "/post/newPost")
 
 	public @ResponseBody boolean addPost(@RequestParam("postText") String postText,
+
 			@RequestParam("user_id") int user_id) {
 		
 
@@ -111,8 +114,8 @@ public class PostController {
 		return true;
 	}
 	
-	@PostMapping(value="/likePost")
-	public @ResponseBody Post likePost(@RequestParam("postId") int postId, @RequestParam("userId") int userId) {
+	@PostMapping(value="post/likePost")
+	public @ResponseBody Post likePost(@RequestParam("postId") int postId, @RequestParam("user_id") int userId) {
 		Post post = postRepo.selectById(postId);
 		Rating rating = new Rating();
 		rating.setUser(userRepo.selectById(userId));

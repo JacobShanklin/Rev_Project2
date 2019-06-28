@@ -26,6 +26,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { PostFeedComponent } from './post-feed/post-feed.component';
 import { PostCardComponent } from './post-card/post-card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     ReactiveFormsModule,
     HttpClientModule,
     InfiniteScrollModule,
+    FontAwesomeModule,
     RouterModule.forRoot([
       { path: 'register', component: RegisterComponent },
       { path: 'resetpassword', component: ResetPasswordComponent},

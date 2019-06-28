@@ -66,3 +66,28 @@ BEGIN
 END;
 /
 
+CREATE OR REPLACE TRIGGER update_user
+
+BEFORE update ON users
+
+for each row
+
+declare
+
+pragma autonomous_transaction;
+
+temp varchar(500);
+
+begin
+
+select password into temp from users where USER_NAME = :new.USER_NAME;
+
+if :new.password!= temp then
+
+    select GET_USER_HASH(:new.USER_NAME,:new.password) into :new.password from dual;
+
+end if;
+
+end;
+/
+

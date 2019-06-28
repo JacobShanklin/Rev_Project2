@@ -25,3 +25,9 @@
     justify-content: center;
     align-items: flex-start;
 }
+
+#like-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}

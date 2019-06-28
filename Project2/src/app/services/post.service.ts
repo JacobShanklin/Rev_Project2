@@ -7,6 +7,7 @@ import { IUser } from './User';
 import { AuthenticationService } from '.';
 import { Router } from '@angular/router';
 import { delay } from 'rxjs/operators';
+import { switchMap } from "rxjs/operators";
 
 @Injectable({
     providedIn: 'root'
@@ -35,6 +36,16 @@ export class PostService {
 
     getPosts(): Observable<IPost[]> {
         return this.posts;
+    }
+
+    likePost(postId: number) {
+        const payload = new HttpParams()
+            .set('postId', postId.toString())
+            .set('user_id', this.currentUser.user_id.toString());
+        this.http.post<IPost>(`${environment.apiUrl}/post/likePost`, payload).subscribe(post => {
+            console.log('Post liked ' + post);
+            
+        });
     }
 
 }
