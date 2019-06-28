@@ -6,6 +6,7 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../services';
+import { UserProfile } from '../services/Profile';
 
 @Component({
   selector: 'app-login',
@@ -17,6 +18,8 @@ export class LoginComponent implements OnInit {
   email = '';
   password = '';
   username = '';
+  user_id: number;
+  userProfile: UserProfile;
   loginForm: FormGroup;
   loading = false;
   submitted = false;
@@ -66,7 +69,7 @@ export class LoginComponent implements OnInit {
                 this.router.navigate([this.returnUrl]);
             },
             error => {
-                this.error = error;
+                // this.error = error;
                 this.loading = false;
             }
         );
@@ -74,9 +77,15 @@ export class LoginComponent implements OnInit {
 
   getUser() {
     this.user = {
-      email: this.email,
       password: this.password,
-      username: this.username
+      username: this.username,
+      user_id: this.user_id,
+      email: '',
+      firstName: '',
+      lastName: '',
+      occupation: '',
+      birthdate: '',
+      hobbies: ''
     };
 
   }

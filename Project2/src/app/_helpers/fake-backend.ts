@@ -4,25 +4,9 @@ import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 import { IUser } from '../services/User';
 import { isBuffer, isUndefined } from 'util';
-
-<<<<<<< HEAD
-let users = [
-{ id: 1, firstName: 'Chris', lastName: 'Sinko', username: 'test', password: 'test' },
-{ id: 2, firstName: 'Jacob', lastName: 'Shanklin', username: 'Admin', password: '123!' },
-{ id: 3, firstName: 'Mert', lastName: 'Altun', username: 'Admin2', password: '123!' },
-{ id: 4, firstName: 'Mike', lastName: 'Perkins', username: 'Admin3', password: '123!' },
-{ id: 5, firstName: 'Tyree', lastName: 'Graham', username: 'Admin4', password: '123!' }
-];
-||||||| merged common ancestors
-let users = [{ id: 1, firstName: 'Chris', lastName: 'Sinko', username: 'test', password: 'test' },
-{ id: 2, firstName: 'Jacob', lastName: 'Shanklin', username: 'Admin', password: '123!' },
-{ id: 3, firstName: 'Mert', lastName: 'Altun', username: 'Admin2', password: '123!' },
-{ id: 4, firstName: 'Mike', lastName: 'Perkins', username: 'Admin3', password: '123!' },
-{ id: 5, firstName: 'Tyree', lastName: 'Graham', username: 'Admin4', password: '123!' }
-];
-=======
-let users = JSON.parse(localStorage.getItem('users')) || [];
->>>>>>> d282ef23b6b9a581847bbea0111f843377db38d7
+/*
+// let users = JSON.parse(localStorage.getItem('users')) || [];
+const users = JSON.parse(localStorage.getItem('users')) || [];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
@@ -45,6 +29,8 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                     return showusers();
                 case url.endsWith('/users/register') && method === 'POST':
                     return register();
+                case url.endsWith('/users/7') && method === 'GET':
+                    return getUserById(0);
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
@@ -83,6 +69,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         function showusers() {
             return ok(users);
         }
+        function getUserById(id) {
+            return ok(users.find(x => x.id === id));
+        }
         // helper functions
 
         // tslint:disable-next-line: no-shadowed-variable
@@ -102,3 +91,4 @@ export const fakeBackendProvider = {
     useClass: FakeBackendInterceptor,
     multi: true
 };
+*/

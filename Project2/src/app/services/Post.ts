@@ -1,4 +1,9 @@
+import { IUser } from './User';
+import { IRating } from './Rating';
+
 export interface IPost {
-    username: string;
-    text: string;
+    postId?: number;
+    user_id: number;
+    post: string;
+    rating: number[];
 }

@@ -4,6 +4,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { CurrentUserService, AuthenticationService } from '../services';
+import { isBuffer } from 'util';
+import { IUser } from '../services/User';
+import { UserProfile } from '../services/Profile';
+import { RegisterForm } from '../services/registerForm';
 
 @Component({
     selector: 'app-register',
@@ -15,6 +19,10 @@ export class RegisterComponent implements OnInit {
     loading = false;
     submitted = false;
     error: string;
+    regUser: IUser;
+    regProfile: UserProfile;
+    tForm: RegisterForm;
+
 
     constructor(
         private formBuilder: FormBuilder,
@@ -22,6 +30,17 @@ export class RegisterComponent implements OnInit {
         private authenticationService: AuthenticationService,
         private userService: CurrentUserService
     ) {
+        this.regUser = {
+            user_id: 0,
+            username: '',
+            password: '',
+            email: '',
+            firstName: '',
+            lastName: '',
+            occupation: '',
+            birthdate: '',
+            hobbies: ''
+        };
         // redirect to home if already logged in
         if (this.authenticationService.currentUserValue) {
             this.router.navigate(['/']);
@@ -48,16 +67,28 @@ export class RegisterComponent implements OnInit {
         if (this.registerForm.invalid) {
             return;
         }
+        this.tForm = this.registerForm.value;
+        console.log(this.tForm);
+        this.regUser.username = this.tForm.username;
+        this.regUser.password = this.tForm.password;
+        this.regUser.firstName = this.tForm.firstName;
+        this.regUser.lastName = this.tForm.lastName;
+        this.regUser.email = this.tForm.email;
+        console.log(this.regUser);
 
         this.loading = true;
-        this.userService.register(this.registerForm.value)
+        this.userService.register(  this.regUser.username,
+                                    this.regUser.password,
+                                    this.regUser.firstName,
+                                    this.regUser.lastName,
+                                    this.regUser.email)
             .pipe(first())
             .subscribe(
                 data => {
                     this.router.navigate(['/login'], { queryParams: { registered: true }});
                 },
                 error => {
-                    this.error = error;
+                    // this.error = error;
                     this.loading = false;
                 });
     }
