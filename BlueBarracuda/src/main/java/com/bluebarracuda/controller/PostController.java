@@ -54,14 +54,11 @@ public class PostController {
 		return postRepo.selectById(postId);
 	}
 
-<<<<<<< HEAD
-	@PostMapping(value = "/newPost")
-	public @ResponseBody boolean addPost(@RequestParam("post") String postText,
-=======
+
 	@PostMapping(value = "/post/newPost")
 
 	public @ResponseBody boolean addPost(@RequestParam("postText") String postText,
->>>>>>> 5d6be326a6cdd2bfd743369677b1ef345489acf1
+
 			@RequestParam("user_id") int user_id) {
 		
 
